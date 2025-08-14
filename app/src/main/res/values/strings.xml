@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Cronobat</string>
+    <string name="app_icon">App Icon</string>
+    
+    <!-- Timer/Stopwatch App Strings -->
+    <string name="time_display_label">Tiempo</string>
+    <string name="set_timer_duration">Establecer Duración del Temporizador</string>
+    <string name="drag_to_set_time">Desliza para establecer el tiempo (máx. 1 hora)</string>
+    <string name="start_timer">Iniciar Temporizador</string>
+    <string name="start_stopwatch">Iniciar Cronómetro</string>
+    <string name="reset">Reiniciar</string>
+    <string name="switch_to_stopwatch">Cambiar a Cronómetro</string>
+    <string name="switch_to_timer">Cambiar a Temporizador</string>
+    
+    <!-- Background Music Strings -->
+    <string name="background_music">Música de Fondo</string>
+    <string name="start_music">Iniciar Música</string>
+    <string name="pause_music">Pausar Música</string>
+    <string name="change_music">Cambiar Música</string>
+    
+    <!-- Music Types -->
+    <string name="music_rain">Lluvia</string>
+    <string name="music_fire">Fuego</string>
+    <string name="music_forest">Bosque</string>
+    <string name="music_ocean">Océano</string>
+    <string name="music_white_noise">Ruido Blanco</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <!-- Landscape-specific strings for better horizontal experience -->
+    <string name="time_display_label">Tiempo</string>
+    <string name="set_timer_duration">Duración del Temporizador</string>
+    <string name="drag_to_set_time">Desliza para establecer el tiempo</string>
+</resources>
