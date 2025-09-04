@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode semantic aliases mapped to CMF palette -->
+    <color name="background_color">#FF0A0A0A</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB3B3B3</color>
+    <color name="primary_color">#FFFFFFFF</color>
+    <color name="accent_color">#FFFF453A</color>
+
+    <!-- Strokes and ripples in dark -->
+    <color name="nothing_stroke">#1AFFFFFF</color>
+    <color name="nothing_ripple">#14FFFFFF</color>
+</resources>
+

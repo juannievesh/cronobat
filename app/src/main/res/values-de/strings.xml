@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Cronobat</string>
+    <string name="app_icon">App-Symbol</string>
+    
+    <!-- Timer/Stopwatch App Strings -->
+    <string name="time_display_label">Zeit</string>
+    <string name="set_timer_duration">Timer-Dauer einstellen</string>
+    <string name="drag_to_set_time">Ziehen Sie, um die Zeit einzustellen (max. 1 Stunde)</string>
+    <string name="start_timer">Timer starten</string>
+    <string name="start_stopwatch">Stoppuhr starten</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="switch_to_stopwatch">Zur Stoppuhr wechseln</string>
+    <string name="switch_to_timer">Zum Timer wechseln</string>
+    <string name="mode">Modus</string>
+    <string name="mode_title">Wählen Sie einen Modus</string>
+    <string name="mode_timer">Timer</string>
+    <string name="mode_stopwatch">Stoppuhr</string>
+    <string name="mode_pomodoro">Pomodoro</string>
+    
+    <!-- Background Music Strings -->
+    <string name="background_music">Hintergrundmusik</string>
+    <string name="start_music">Musik starten</string>
+    <string name="pause_music">Musik pausieren</string>
+    <string name="change_music">Musik ändern</string>
+
+    <!-- Pomodoro Strings -->
+    <string name="pomodoro">Pomodoro</string>
+    <string name="pomodoro_focus_duration">Fokus-Dauer</string>
+    <string name="pomodoro_break_duration">Pausen-Dauer</string>
+    <string name="pomodoro_hint">Fokus und Pause anpassen, dann starten</string>
+    <string name="start_pomodoro">Pomodoro starten</string>
+    <string name="pause_pomodoro">Pomodoro pausieren</string>
+    <string name="reset_pomodoro">Pomodoro zurücksetzen</string>
+    <string name="phase_focus">Fokus</string>
+    <string name="phase_break">Pause</string>
+
+    <!-- Usage Access / Focus Guard -->
+    <string name="usage_title">Nutzungszugriff erlauben</string>
+    <string name="usage_message">Um Sie zu erinnern, wenn Sie Unterhaltungs-Apps öffnen, gewähren Sie Cronobat \"Nutzungszugriff\".</string>
+    <string name="usage_go">Zu den Einstellungen</string>
+    <string name="usage_later">Später</string>
+    <string name="focus_guard_title">Fokus-Modus aktiv</string>
+    <string name="focus_guard_text">Sie sind im %1$s • %2$s verbleibend</string>
+    <string name="focus_guard_warning">Öffnen von %1$s während %2$s aktiv ist. Pausieren oder stoppen?</string>
+    <string name="distraction_overlay_text">Sie sind im Fokus-Modus. Zurück zu Cronobat…</string>
+    
+    <!-- Music Types -->
+    <string name="music_rain">Regen</string>
+    <string name="music_fire">Feuer</string>
+    <string name="music_forest">Wald</string>
+    <string name="music_ocean">Ozean</string>
+    <string name="music_white_noise">Weißes Rauschen</string>
+</resources>
+

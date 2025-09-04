@@ -7,11 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    
-    <!-- Custom colors for Cronobat app -->
-    <color name="background_color">#F5F5F5</color>
-    <color name="text_primary">#212121</color>
-    <color name="text_secondary">#757575</color>
-    <color name="primary_color">#2196F3</color>
-    <color name="accent_color">#FF4081</color>
+
+    <!-- Nothing UK inspired monochrome palette -->
+    <color name="nothing_background">#FFFAFAFA</color>
+    <color name="nothing_surface">#FFFFFFFF</color>
+    <color name="nothing_black">#FF000000</color>
+    <color name="nothing_grey_700">#FF4D4D4D</color>
+    <color name="nothing_grey_500">#FF9E9E9E</color>
+    <color name="nothing_grey_300">#FFE0E0E0</color>
+    <color name="nothing_stroke">#1A000000</color>
+    <color name="nothing_ripple">#0D000000</color>
+
+    <!-- App semantic aliases mapped to CMF palette -->
+    <color name="background_color">@color/nothing_background</color>
+    <color name="text_primary">@color/nothing_black</color>
+    <color name="text_secondary">@color/nothing_grey_700</color>
+    <color name="primary_color">@color/nothing_black</color>
+    <color name="accent_color">#FFFF3B30</color>
 </resources>

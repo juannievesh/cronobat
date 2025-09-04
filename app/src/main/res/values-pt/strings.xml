@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Cronobat</string>
+    <string name="app_icon">Ícone do App</string>
+    
+    <!-- Timer/Stopwatch App Strings -->
+    <string name="time_display_label">Tempo</string>
+    <string name="set_timer_duration">Definir Duração do Temporizador</string>
+    <string name="drag_to_set_time">Deslize para definir o tempo (máx. 1 hora)</string>
+    <string name="start_timer">Iniciar Temporizador</string>
+    <string name="start_stopwatch">Iniciar Cronômetro</string>
+    <string name="reset">Reiniciar</string>
+    <string name="switch_to_stopwatch">Mudar para Cronômetro</string>
+    <string name="switch_to_timer">Mudar para Temporizador</string>
+    <string name="mode">Modo</string>
+    <string name="mode_title">Selecione um modo</string>
+    <string name="mode_timer">Temporizador</string>
+    <string name="mode_stopwatch">Cronômetro</string>
+    <string name="mode_pomodoro">Pomodoro</string>
+    
+    <!-- Background Music Strings -->
+    <string name="background_music">Música de Fundo</string>
+    <string name="start_music">Iniciar Música</string>
+    <string name="pause_music">Pausar Música</string>
+    <string name="change_music">Mudar Música</string>
+
+    <!-- Pomodoro Strings -->
+    <string name="pomodoro">Pomodoro</string>
+    <string name="pomodoro_focus_duration">Duração do foco</string>
+    <string name="pomodoro_break_duration">Duração do intervalo</string>
+    <string name="pomodoro_hint">Ajuste foco e intervalo, depois inicie</string>
+    <string name="start_pomodoro">Iniciar Pomodoro</string>
+    <string name="pause_pomodoro">Pausar Pomodoro</string>
+    <string name="reset_pomodoro">Reiniciar Pomodoro</string>
+    <string name="phase_focus">Foco</string>
+    <string name="phase_break">Intervalo</string>
+
+    <!-- Usage Access / Focus Guard -->
+    <string name="usage_title">Permitir acesso ao uso</string>
+    <string name="usage_message">Para lembrá-lo quando abrir apps de entretenimento, conceda "Acesso ao uso" ao Cronobat.</string>
+    <string name="usage_go">Ir para configurações</string>
+    <string name="usage_later">Mais tarde</string>
+    <string name="focus_guard_title">Modo foco ativo</string>
+    <string name="focus_guard_text">Você está em %1$s • %2$s restantes</string>
+    <string name="focus_guard_warning">Abrindo %1$s enquanto %2$s está ativo. Pausar ou parar?</string>
+    <string name="distraction_overlay_text">Você está no modo foco. Voltando ao Cronobat…</string>
+    
+    <!-- Music Types -->
+    <string name="music_rain">Chuva</string>
+    <string name="music_fire">Fogo</string>
+    <string name="music_forest">Floresta</string>
+    <string name="music_ocean">Oceano</string>
+    <string name="music_white_noise">Ruído Branco</string>
+</resources>
+

@@ -8,13 +8,13 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- App Title -->
+    <!-- Mode Title -->
     <TextView
-        android:id="@+id/tvAppTitle"
+        android:id="@+id/tvModeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:text="@string/mode_pomodoro"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
         android:textColor="@color/text_primary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,11 +27,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/nothing_stroke"
+        app:strokeWidth="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvAppTitle">
+        app:layout_constraintTop_toBottomOf="@id/tvModeTitle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,41 +42,31 @@
             android:padding="32dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/time_display_label"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:textColor="@color/text_secondary" />
-
-            <TextView
                 android:id="@+id/tvTimeDisplay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
                 android:text="00:00"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+                android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
                 android:textColor="@color/text_primary"
-                android:textStyle="bold"
-                android:fontFamily="monospace" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Mode Switch Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSwitchMode"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    <!-- Mode FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/switch_to_stopwatch"
-        app:cornerRadius="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardTimeDisplay" />
+        android:layout_margin="16dp"
+        android:contentDescription="@string/mode"
+        android:src="@drawable/ic_launcher_simple"
+        app:backgroundTint="@color/nothing_black"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Timer Layout -->
     <LinearLayout
@@ -86,7 +78,7 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSwitchMode">
+        app:layout_constraintTop_toBottomOf="@id/cardTimeDisplay">
 
         <!-- Timer Duration Control -->
         <com.google.android.material.card.MaterialCardView
@@ -94,7 +86,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="4dp">
+            app:cardElevation="0dp"
+            app:strokeColor="@color/nothing_stroke"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -107,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:text="@string/set_timer_duration"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                     android:textColor="@color/text_primary" />
 
                 <SeekBar
@@ -122,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/drag_to_set_time"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
                     android:textColor="@color/text_secondary" />
 
             </LinearLayout>
@@ -143,17 +137,16 @@
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:text="@string/start_timer"
-                app:cornerRadius="24dp" />
+                style="@style/Widget.Cronobat.Button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnResetTimer"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.Cronobat.Button.Outlined"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:text="@string/reset"
-                app:cornerRadius="24dp" />
+                android:text="@string/reset" />
 
         </LinearLayout>
 
@@ -165,89 +158,176 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSwitchMode">
+        app:layout_constraintTop_toBottomOf="@id/cardTimeDisplay">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnStartStopwatch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:text="@string/start_stopwatch"
-            app:cornerRadius="24dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnResetStopwatch"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:text="@string/reset"
-            app:cornerRadius="24dp" />
-
-    </LinearLayout>
-
-    <!-- Background Music Controls -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardMusicControls"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/timerLayout">
-
+        <!-- Stopwatch Control Buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartStopwatch"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="@string/background_music"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:textColor="@color/text_primary" />
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/start_stopwatch"
+                style="@style/Widget.Cronobat.Button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetStopwatch"
+                style="@style/Widget.Cronobat.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/reset" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Pomodoro Layout -->
+    <LinearLayout
+        android:id="@+id/pomodoroLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardTimeDisplay">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/nothing_stroke"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:padding="20dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnToggleMusic"
-                    android:layout_width="0dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_weight="1"
-                    android:text="@string/start_music"
-                    app:cornerRadius="24dp" />
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/pomodoro"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:textColor="@color/text_primary" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnChangeMusic"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="0dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:text="@string/change_music"
-                    app:cornerRadius="24dp" />
+                    android:text="@string/pomodoro_focus_duration"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                    android:textColor="@color/text_secondary" />
+
+                <SeekBar
+                    android:id="@+id/seekFocus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:max="90"
+                    android:progress="25" />
+
+                <TextView
+                    android:id="@+id/tvFocusValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 min"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                    android:textColor="@color/text_secondary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pomodoro_break_duration"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+                    android:textColor="@color/text_secondary" />
+
+                <SeekBar
+                    android:id="@+id/seekBreak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:max="30"
+                    android:progress="5" />
+
+                <TextView
+                    android:id="@+id/tvBreakValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 min"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                    android:textColor="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvPomodoroHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/pomodoro_hint"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                    android:textColor="@color/text_secondary" />
 
             </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartPomodoro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/start_pomodoro"
+                style="@style/Widget.Cronobat.Button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetPomodoro"
+                style="@style/Widget.Cronobat.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/reset_pomodoro" />
 
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- Music Icon -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_music"
+        app:backgroundTint="@color/nothing_black"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

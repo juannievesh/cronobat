@@ -111,18 +111,18 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Mode Switch Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSwitchMode"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    <!-- Mode FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/switch_to_stopwatch"
-        app:cornerRadius="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardTimeDisplay" />
+        android:layout_margin="16dp"
+        android:contentDescription="@string/mode"
+        android:src="@drawable/ic_launcher_simple"
+        app:backgroundTint="@color/nothing_black"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Timer Layout -->
     <LinearLayout
@@ -134,7 +134,7 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSwitchMode">
+        app:layout_constraintTop_toBottomOf="@id/cardTimeDisplay">
 
         <!-- Timer Duration Control -->
         <com.google.android.material.card.MaterialCardView
@@ -218,7 +218,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSwitchMode">
+        app:layout_constraintTop_toBottomOf="@id/cardTimeDisplay">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnStartStopwatch"

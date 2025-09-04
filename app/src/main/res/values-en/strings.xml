@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Cronobat</string>
+    <string name="app_icon">App Icon</string>
+    
+    <!-- Timer/Stopwatch App Strings -->
+    <string name="time_display_label">Time</string>
+    <string name="set_timer_duration">Set Timer Duration</string>
+    <string name="drag_to_set_time">Drag to set time (max 1 hour)</string>
+    <string name="start_timer">Start Timer</string>
+    <string name="start_stopwatch">Start Stopwatch</string>
+    <string name="reset">Reset</string>
+    <string name="switch_to_stopwatch">Switch to Stopwatch</string>
+    <string name="switch_to_timer">Switch to Timer</string>
+    <string name="mode">Mode</string>
+    <string name="mode_title">Select a mode</string>
+    <string name="mode_timer">Timer</string>
+    <string name="mode_stopwatch">Stopwatch</string>
+    <string name="mode_pomodoro">Pomodoro</string>
+    
+    <!-- Background Music Strings -->
+    <string name="background_music">Background Music</string>
+    <string name="start_music">Start Music</string>
+    <string name="pause_music">Pause Music</string>
+    <string name="change_music">Change Music</string>
+
+    <!-- Pomodoro Strings -->
+    <string name="pomodoro">Pomodoro</string>
+    <string name="pomodoro_focus_duration">Focus duration</string>
+    <string name="pomodoro_break_duration">Break duration</string>
+    <string name="pomodoro_hint">Adjust focus and break, then start</string>
+    <string name="start_pomodoro">Start Pomodoro</string>
+    <string name="pause_pomodoro">Pause Pomodoro</string>
+    <string name="reset_pomodoro">Reset Pomodoro</string>
+    <string name="phase_focus">Focus</string>
+    <string name="phase_break">Break</string>
+
+    <!-- Usage Access / Focus Guard -->
+    <string name="usage_title">Allow usage access</string>
+    <string name="usage_message">To remind you when you open entertainment apps, grant "Usage Access" to Cronobat.</string>
+    <string name="usage_go">Go to settings</string>
+    <string name="usage_later">Later</string>
+    <string name="focus_guard_title">Focus mode active</string>
+    <string name="focus_guard_text">You are in %1$s • %2$s remaining</string>
+    <string name="focus_guard_warning">Opening %1$s while %2$s is active. Pause or stop?</string>
+    <string name="distraction_overlay_text">You are in focus mode. Returning to Cronobat…</string>
+    
+    <!-- Music Types -->
+    <string name="music_rain">Rain</string>
+    <string name="music_fire">Fire</string>
+    <string name="music_forest">Forest</string>
+    <string name="music_ocean">Ocean</string>
+    <string name="music_white_noise">White Noise</string>
+</resources>
+
